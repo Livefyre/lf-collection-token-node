@@ -15,9 +15,7 @@
   },
   "dependencies": {
     "node": "*",
-    "jwt-simple": "*",
-    "MD5": "*",
-    "base64": "*"
+    "jwt-simple": "*"
   },
   "devDependencies": {
     "mocha": "*",
