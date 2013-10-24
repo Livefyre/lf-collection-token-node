@@ -1,0 +1,24 @@
+{
+  "name": "streamhub-collection-token",
+  "description": "Encodes collection meta to JWT",
+  "author": "",
+  "license": "MIT",
+  "version": "0.0.1",
+  "private": true,
+  "engines": {
+    "node": "0.10.5",
+    "npm": "1.2.15"
+  },
+  "main": "lib/main.js",
+  "scripts": {
+    "test": "mocha test/*.js"
+  },
+  "dependencies": {
+    "node": "*",
+    "jwt": "*"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*"
+  }
+}
