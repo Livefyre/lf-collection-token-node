@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "node": "*",
-    "jwt": "*",
+    "jwt-simple": "*",
     "MD5": "*",
     "base64": "*"
   },

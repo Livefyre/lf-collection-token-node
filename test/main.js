@@ -3,13 +3,25 @@ var sinon = require('sinon');
 var LFCollectionMetaEncoder = require('../lib/main');
 
 describe('LFCollectionMetaEncoder', function() {
+    // Collection Metadata schema:
+    // https://github.com/Livefyre/livefyre-docs/wiki/StreamHub-Integration-Guide#wiki-collection-metadata
     var collectionMeta = {
-        networkId: 'livefyre.com',
-        siteId: '12345',
-        articleId: 'blah',
-        type: 'livecomments'
+        'siteId': '12345',
+        'articleId': 'blah',
+        'title': 'my collection',
+        'url': 'http://mysite/mycollection',
+        'type': 'livecomments'
     };
     var siteKey = 'WOWZERS';
+
+    //var collectionMeta = {
+    //    "url": "http://apps.livefyre.com/test1", 
+    //    "siteId": '346337',
+    //    "articleId": "test1", 
+    //    "type": "reviews", 
+    //    "title": "test1"
+    //};
+    //var siteKey = 'btoNzNf16Zt0sA94WUznhVj9TNk=';
 
     describe('with no arguments', function() {
         it('is an instance of LFCollectionMetaEncoder', function() {
@@ -42,7 +54,7 @@ describe('LFCollectionMetaEncoder', function() {
             var spy = sinon.spy(encoder, '_serializedJWT');
 
             var serializedJWT = encoder.encode(collectionMeta, siteKey);
-            expect(serializedJWT).to.equal('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuZXR3b3JrSWQiOiJsaXZlZnlyZS5jb20iLCJzaXRlSWQiOiIxMjM0NSIsImFydGljbGVJZCI6ImJsYWgiLCJ0eXBlIjoibGl2ZWNvbW1lbnRzIiwiY2hlY2tzdW0iOiJjNmU1YzhjNTZkNDk2MmRlMTU3NDJlZjdlODU1YTdhMyJ9.V0haRVZWVTFaV2RVUkVGMWRIa3hTamhYYlVseFNFdHNRamRITWxGT0wwbFNjV1phVTNvMFZ6WnNUVDA9');
+            expect(serializedJWT).to.equal('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzaXRlSWQiOiIxMjM0NSIsImFydGljbGVJZCI6ImJsYWgiLCJ0aXRsZSI6Im15IGNvbGxlY3Rpb24iLCJ1cmwiOiJodHRwOi8vbXlzaXRlL215Y29sbGVjdGlvbiIsInR5cGUiOiJsaXZlY29tbWVudHMifQ.v0mh-Y_ybGthOua1T7WFJBPTpGHx2mCI8iy4madsWy0');
         });
     });
 });
