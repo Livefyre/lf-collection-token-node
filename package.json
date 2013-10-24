@@ -1,5 +1,5 @@
 {
-  "name": "streamhub-collection-token",
+  "name": "lf-collection-token-node",
   "description": "Encodes collection meta to JWT",
   "author": "",
   "license": "MIT",
