@@ -15,10 +15,13 @@
   },
   "dependencies": {
     "node": "*",
-    "jwt": "*"
+    "jwt": "*",
+    "MD5": "*",
+    "base64": "*"
   },
   "devDependencies": {
     "mocha": "*",
-    "should": "*"
+    "chai": "*",
+    "sinon": "*"
   }
 }
